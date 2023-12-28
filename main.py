@@ -3,9 +3,10 @@ import os
 import glob
 from db_manager import *
 
-path = 'C:\\Users\\gran007\\Desktop\\주식\\202312'
+path = 'C:\\Users\\gran007\\Desktop\\주식\\202311'
 
-if __name__ == '__main__':
+
+def insert_excel_data():
     for file_path in glob.glob(f'{path}/*.xlsx'):
         basename = os.path.basename(file_path)
         date = os.path.splitext(basename)[0]
@@ -18,3 +19,7 @@ if __name__ == '__main__':
             insert_company_type(row_data)
             insert_daily_data(date, row_data)
         commit()
+
+
+if __name__ == '__main__':
+    insert_excel_data()
