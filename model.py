@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session, declarative_base
 
 
 user = 'gran007'
-pwd = 'gran4175'
+pwd = 'gran1234'
 db_name = 'stock_db'
 db_url = f'mysql+pymysql://{user}:{pwd}@localhost/{db_name}?charset=utf8'
 
