@@ -21,9 +21,9 @@ class CompanyType(Base):
     id = Column(Integer, ForeignKey('daily_data.code'), primary_key=True)
     name = Column(String, nullable=False)
 
-    def __init__(self, row):
-        self.id = row[0]
-        self.name = row[1]
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
 
 
 class MarketType(Base):

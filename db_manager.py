@@ -21,5 +21,13 @@ def insert_company_type(row):
         db_session.add(CompanyType(row))
 
 
+def insert_company_type(id, name):
+    company_type = [f for f in db_session.query(CompanyType).filter(CompanyType.id == id)]
+    if len(company_type) == 0:
+        db_session.add(CompanyType(id, name))
+
+
+
+
 def commit():
     db_session.commit()
